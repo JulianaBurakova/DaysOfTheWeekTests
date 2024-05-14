@@ -90,5 +90,9 @@ class DayOfTheWeekTest {
                 throw new IllegalArgumentException("Invalid day number");
         }
     }
-
+    @Test
+    void testLargeValues() {
+        assertEquals("The number should be between 1 and 7 (inclusive)", dayOfTheWeek.getDay(10));
+        assertEquals("The number should be between 1 and 7 (inclusive)", dayOfTheWeek.getDay(20));
+    }
     }
